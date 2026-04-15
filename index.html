@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Voice Translator</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="glass-card">
+        
+        <!-- Header with decorative elements -->
+        <div class="header">
+            <div class="wave-decoration"></div>
+            <h1>
+                <i class="fas fa-microphone-alt"></i>
+                Voice Translator
+                <i class="fas fa-language"></i>
+            </h1>
+            <p class="subtitle">Speak naturally, translate instantly</p>
+        </div>
+
+        <!-- Language Selection Section -->
+        <div class="language-section">
+            <div class="lang-card">
+                <label class="lang-label">
+                    <i class="fas fa-microphone"></i> From
+                </label>
+                <input list="languages" id="fromLang" placeholder="Select language code (en, hi, kn)" class="lang-input">
+            </div>
+            
+            <div class="exchange-icon">
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+            
+            <div class="lang-card">
+                <label class="lang-label">
+                    <i class="fas fa-book-open"></i> To
+                </label>
+                <input list="languages" id="toLang" placeholder="Select language code (en, hi, kn)" class="lang-input">
+            </div>
+            <datalist id="languages"></datalist>
+        </div>
+
+        <!-- Mic Button Section -->
+        <div class="mic-section">
+            <div class="pulse-ring"></div>
+            <button id="speakBtn" class="mic-btn">
+                <i class="fas fa-microphone"></i>
+                <span class="mic-tooltip">Click to speak</span>
+            </button>
+            <p class="mic-hint">Press the microphone and start speaking</p>
+        </div>
+
+        <!-- Output Section -->
+        <div class="output-section">
+            <!-- Recognized Text Card -->
+            <div class="output-card">
+                <div class="card-header">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>Recognized Speech</h3>
+                    <span class="badge">Live</span>
+                </div>
+                <div class="card-content">
+                    <p id="output" class="recognized-text">-</p>
+                </div>
+            </div>
+
+            <!-- Emotion Card -->
+            <div class="output-card emotion-card">
+                <div class="card-header">
+                    <i class="fas fa-heart"></i>
+                    <h3>Emotion Detection</h3>
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="card-content">
+                    <div class="emotion-display">
+                        <p id="emotion" class="emotion-text">😐 Neutral</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Translation Card -->
+            <div class="output-card translation-card">
+                <div class="card-header">
+                    <i class="fas fa-language"></i>
+                    <h3>Translated Text</h3>
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="card-content">
+                    <p id="translated" class="translated-text">-</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>✨ Supported Languages: English, Hindi, Kannada, Tamil, Telugu, Malayalam & more ✨</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
